@@ -15,4 +15,4 @@
 
 
 ## 作者微信：
-![微信号：studyjava](https://github.com/mmzsblog/mmzsblog-util/blob/master/images/studyjava.png)
+![微信号：studyjava](https://files-cdn.cnblogs.com/files/mmzs/studyjava.bmp)
