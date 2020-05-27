@@ -15,4 +15,4 @@
 
 
 ## 作者微信：
-![微信号：studyjava](https://files-cdn.cnblogs.com/files/mmzs/studyjava.bmp)
+![微信号是studyjava](images/studyjava.png)
