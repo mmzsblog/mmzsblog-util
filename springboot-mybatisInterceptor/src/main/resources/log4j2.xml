@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="off">
+
+    <!-- 变量配置 -->
+    <Properties>
+        <Property name="log_path">D:/logs</Property>
+        <!-- <Property name="log_path">${web:rootDir}/custom</Property>-->
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level
+				%logger{36} - %msg%n"/>
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+        <RollingFile name="DailyRollingFileInfo"
+                     fileName="${log_path}/loginfo.log"
+                     filePattern="${log_path}/loginfo%d{yyyy-MM-dd}-%i.log.gz" ignoreExceptions="false">
+
+            <ThresholdFilter level="info" onMatch="ACCEPT"
+                             onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="200 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="DailyRollingFiledebug" fileName="${log_path}/logdebug.log"
+                     filePattern="${log_path}/logdebug%d{yyyy-MM-dd}-%i.log.gz" ignoreExceptions="false">
+
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="200 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="DailyRollingFileError"
+                     fileName="${log_path}/logerror.log"
+                     filePattern="${log_path}/logerror%d{yyyy-MM-dd}-%i.log.gz" ignoreExceptions="false">
+
+            <ThresholdFilter level="error" onMatch="ACCEPT"
+                             onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="200 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- 业务debug日志 -->
+        <logger name="com.chinasofti.huateng" level="DEBUG"/>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="DailyRollingFileInfo"/>
+            <AppenderRef ref="DailyRollingFiledebug"/>
+            <AppenderRef ref="DailyRollingFileError"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,49 @@
+server:
+  port: 8001
+  name: springboot-mybatis-interceptor-on-the-database-level-table
+  # 设置tomcat相关配置
+  tomcat:
+    # 最大工作线程数
+    max-threads: 520
+    # 初始化时创建的最小工作线程数
+    min-spare-threads: 10
+    # 最大链接数
+    max-connections: 520
+
+mybatis:
+  #config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  #type-aliases-package: com.chinasofti.huateng.common.entities    # 所有Entity别名类所在包
+  mapper-locations: classpath:mapper/*Mapper.xml                       # mapper映射文件
+
+spring:
+  application:
+    name: springboot-mybatis-interceptor-on-the-database-level-table
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    druid:
+      driver-class-name: oracle.jdbc.driver.OracleDriver      # oracle驱动包
+      # 生产数据库 地址；账户；密码
+      url: jdbc:oracle:thin:@127.0.0.1:1521/ORCL
+      username: mmzsit
+      password: mmzsit
+      filters: stat,wall,slf4j
+      initial-size: 5
+      max-active: 10
+      min-idle: 5
+      max-wait: 30000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size:  20
+      validation-query: SELECT 1 FROM DUAL
+      validation-query-timeout: 60000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis:  60000
+      min-evictable-idle-time-millis: 100000
+      # 设置 druid 监控界面的相关信息
+      stat-view-servlet:
+         enabled: true
+         url-pattern: /druid/*
+         reset-enable: false
+         login-username: admin
+         login-password: admin

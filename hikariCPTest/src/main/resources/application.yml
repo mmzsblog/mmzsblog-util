@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    # SpringBoot1的Tomcat
+#    active: tomcat
+    # SpringBoot2的HikariCP
+    active: hikaricp
+    # 阿里的druid
+#    active: druid

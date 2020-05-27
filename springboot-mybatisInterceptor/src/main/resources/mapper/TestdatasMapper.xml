@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mmzsit.dao.TestdatasDao">
+  <resultMap id="BaseResultMap" type="com.java.mmzsit.entity.TestDatas">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="AGE" jdbcType="VARCHAR" property="age" />
+    <result column="INFORMATION" jdbcType="VARCHAR" property="information" />
+    <result column="UPDATEDATE" jdbcType="VARCHAR" property="updatedate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, NAME, AGE, INFORMATION, UPDATEDATE
+  </sql>
+
+  <insert id="insert" parameterType="com.java.mmzsit.entity.TestDatas">
+    insert into TESTDATAS (ID, NAME, AGE, INFORMATION,
+      UPDATEDATE)
+    values (#{id,jdbcType=INTEGER},
+            #{name,jdbcType=VARCHAR},
+            #{age,jdbcType=VARCHAR},
+            #{information,jdbcType=VARCHAR},
+            #{updatedate,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>

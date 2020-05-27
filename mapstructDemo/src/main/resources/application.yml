@@ -1,0 +1,9 @@
+server:
+  port: 8001
+  name: mapstruct
+
+# spring的相关配置
+spring:
+  application:
+    name: mapstruct工程
+

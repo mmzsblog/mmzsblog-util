@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ftpUtil
+server:
+  port: 8001
+
+# 配置ftp服务器信息
+ftp: 
+  # ftp服务器的IP地址
+  url: 127.0.0.0
+  # 默认端口是21
+  port: 21
+  username: ftpuser
+  password: ftpuser
+  # ftp服务器存放文件的路径
+  remotePath: /data/ftp
+  # 本地需要上传的文件的路径
+  localDir: D:/test
+  # ftp上文件下载到本地存放的路径
+  downDir: D:/test

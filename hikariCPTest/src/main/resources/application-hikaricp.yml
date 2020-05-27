@@ -1,0 +1,29 @@
+server:
+  port: 18001
+
+# spring的相关配置
+spring:
+  application:
+    name: HikariCP测试
+  # 数据源的配置
+  datasource:
+    # mysql驱动包
+    driver-class-name: com.mysql.jdbc.Driver
+    # mysql数据库 地址；账户；密码
+    url: jdbc:mysql://localhost:3306/mmzsblogtest
+    username: root
+    password: 123456
+#    # 连接池的配置
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      minimum-idle: 5
+#      maximum-pool-size: 15
+#      connection-test-query: SELECT 1
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
+#      pool-name: DatebookHikariCP
+
+mybatis:
+  # mapper映射文件
+  mapper-locations: classpath:mapper/*Mapper.xml
+
