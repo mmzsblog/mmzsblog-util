@@ -12,7 +12,7 @@
 ## SpringBoot 相关：
 - [springboot中涉及的那些连接池](hikariCPTest)
 - [springboot中实现定时任务](springboot-schedule)
-- [springboot整合redis](springboot-schedule)
+- [springboot整合redis](springboot-redis)
 
 
 ## 作者微信：
