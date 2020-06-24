@@ -1,0 +1,44 @@
+server:
+  port: 8001
+  name: springboot-redis
+
+# spring的相关配置
+spring:
+  application:
+    name: springboot整合redis
+
+# REDIS (RedisProperties)
+# Redis数据库索引（默认为0）
+  redis:
+    #默认是索引为0的数据库
+    database: 1
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: mmzsblog
+    # 连接超时时间（毫秒）
+    timeout: 2000s
+
+    # 配置文件中添加 jedis.pool 相关配置，则会使用到 jedis 连接池
+    # 通常项目由 SpringBoot1.x 升级到 SpringBoot2.x 时，要沿用 jedis 连接池配置
+#    jedis:
+#      pool:
+#        max-active: 10
+#        max-idle: 8
+#        min-idle: 10
+#        max-wait: 60s
+
+    # 配置文件中添加 lettuce.pool 相关配置，则会使用到lettuce连接池
+    lettuce:
+      pool:
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1ms
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 10
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 10
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-activ: 8
+

@@ -5,13 +5,14 @@
 
 
 ## 框架相关：
-- [整合mybatis拦截器的按月分表功能](springboot-mybatisInterceptor)
+- [整合mybatis拦截器的按月分表功能](springboot-mybatis-Interceptor)
 - [基于springboot的Ftp上传与下载工具类](springboot-FtpUtil)
 - [mapstruct使用](mapstructDemo)
 
 ## SpringBoot 相关：
 - [springboot中涉及的那些连接池](hikariCPTest)
 - [springboot中实现定时任务](springboot-schedule)
+- [springboot整合redis](springboot-schedule)
 
 
 ## 作者微信：
