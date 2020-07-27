@@ -12,7 +12,7 @@ import javax.mail.internet.MimeMessage;
 @Service
 public class SendMail {
 
-    @Autowired
+    @Resource
     private JavaMailSenderImpl javaMailSenderImpl;
 
     // 简单消息邮件
