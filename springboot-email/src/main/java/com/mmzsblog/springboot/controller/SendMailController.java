@@ -1,14 +1,14 @@
-package com.mail.test;
+package com.mmzsblog.springboot.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mmzsblog.springboot.service.SendMail;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mail.service.SendMail;
+import javax.annotation.Resource;
 
 @RestController
 public class SendMailController {
-	@Autowired
+	@Resource
 	private SendMail sendMail;
 	@GetMapping("/sendSimpleMail")
 	public void sendSimpleMail() {

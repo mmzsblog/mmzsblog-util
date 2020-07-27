@@ -1,4 +1,4 @@
-package com.mail;
+package com.mmzsblog.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -6,11 +6,15 @@ spring:
       charset: utf-8
       enabled: true
   mail:
-    username: 529836729@qq.com
-    password: irlfqrxursfybjhi
+    username: xxxxxxxxxx@qq.com
+    password: mmzsblogtest
     host: smtp.qq.com
     properties:
       mail:
         smtp:
           ssl:
             enable: true
+
+
+
+
