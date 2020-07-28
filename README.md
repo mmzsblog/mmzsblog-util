@@ -13,6 +13,7 @@
 - [springboot中涉及的那些连接池](hikariCPTest)
 - [springboot中实现定时任务](springboot-schedule)
 - [springboot整合redis](springboot-redis)
+- [springboot整合邮件发送](springboot-email)
 
 
 ## 作者微信：
