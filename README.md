@@ -17,4 +17,4 @@
 
 
 ## 作者微信：
-![微信号是studyjava](images/studyjava.png)
+![微信号是studyjava](https://github.com/mmzsblog/mmzsblog-util/blob/master/images/studyjava.png)
