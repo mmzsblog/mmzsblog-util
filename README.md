@@ -14,6 +14,7 @@
 - [springboot中实现定时任务](springboot-schedule)
 - [springboot整合redis](springboot-redis)
 - [springboot整合邮件发送](springboot-email)
+- [springboot整合邮件发送](springboot-shiro)
 
 
 ## 作者微信：
