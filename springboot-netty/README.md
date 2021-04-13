@@ -1,8 +1,9 @@
-# springboot-redis
-springboot整合redis
+# springboot-netty
+springboot整合netty
 
 
 - 使用说明文档：
-[https://www.mmzsblog.cn/articles/2020/06/24/1592963113998.html](https://www.mmzsblog.cn/articles/2020/06/24/1592963113998.html)
+Netty解决粘包和拆包问题的四种方案
+[https://www.mmzsblog.cn/articles/2021/04/13/1618284054945.html](https://www.mmzsblog.cn/articles/2021/04/13/1618284054945.html)
 
 

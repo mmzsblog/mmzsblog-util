@@ -5,7 +5,7 @@ package com.java.mmzsblog.client;
  * @description：netty服务测试验证
  * @date ：created at 2021/04/12 16:12
  */
-public class test {
+public class SendMessageTest {
 
     /**
      * 单条数据发送测试
