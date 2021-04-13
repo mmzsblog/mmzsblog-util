@@ -1,0 +1,56 @@
+server:
+  port: 8001
+  name: springboot-netty
+
+# spring的相关配置
+spring:
+  application:
+    name: springboot整合netty
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: com.mysql.jdbc.Driver      # mysql驱动包
+    # 本地mysql数据库 地址；账户；密码
+    url: jdbc:mysql://127.0.0.1:3306/springboot-netty?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: xxxxxx
+  druid:
+    # 配置初始化大小、最小、最大
+    initialSize: 5
+    maxActive: 19
+    minIdle: 5
+    # 配置获取连接等待超时的时间
+    maxWait: 10000
+    # 打开 PSCache，并且指定每个连接上 PSCache 的大小（Oracle 使用）
+#      pool-prepared-statements: true
+#      max-pool-prepared-statement-per-connection-size:  20
+    validationQuery: SELECT 'x' FROM DUAL
+    validationQueryTimeout: 6000
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 600000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 100000
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    # 设置 druid 监控界面的相关信息
+    servlet:
+       enabled: true
+       urlPattern: /druid/*
+       resetEnable: false
+       loginUsername: admin
+       loginPassword: admin
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+# netty相关自定义配置
+socket:
+  server:
+    # 服务端端口号
+    port: 10001
+    # 拆包分隔符号
+    split: '$'

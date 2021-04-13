@@ -16,6 +16,7 @@
 - [springboot2.x 整合邮件发送](springboot-email)
 - [springboot2.x 整合 shiro 权限框架](springboot-shiro)
 - [SpringBoot2.x 整合 thumbnailator 图片处理](springboot_thumbnails)
+- [SpringBoot2.x 整合 netty socket通讯](springboot-netty)
 
 ## 作者微信：
 ![微信号是studyjava](images/studyjava.png)
