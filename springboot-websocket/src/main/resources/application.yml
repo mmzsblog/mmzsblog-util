@@ -1,0 +1,8 @@
+server:
+  port: 8001
+  name: springboot-websocket
+
+# spring的相关配置
+spring:
+  application:
+    name: springboot 整合 websocket
